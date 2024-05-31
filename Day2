@@ -1,0 +1,21 @@
+#Calculate the total spend by the customer
+#Ask the user for the amount of each item
+Customer_name = input("Enter the customer name: ")
+print("Hello", Customer_name , "welcome to MK's Restotaunt")
+price_rice =int(input("Enter the price of rice:$ "))
+price_beans =int(input("Enter the price of beans:$ "))
+price_fish =int(input("Enter the price of fish:$ "))
+plate_of_rice =input("How many plates of rice do you want?\n")
+plate_of_beans =input("How many plates of beans do you want?\n")
+plate_of_fish =input("How many plates of fish do you want?\n")
+Total_rice =int(plate_of_rice)*price_rice
+Total_beans =int(plate_of_beans)*price_beans
+Total_fish =int(plate_of_fish)*price_fish
+Number_of_people =int(input("How many people are you with?\n"))
+Tip_amount =int(input("How much tip do you want to give?\n"))
+Total_bills = float(Total_rice + Total_beans + Total_fish + Tip_amount)*Number_of_people
+Total_bill ="{:.2f}".format(Total_bills)
+Slip_bill =int(Total_bills/Number_of_people)
+Slip_bills = "{:.2f}".format(Slip_bill)
+print(f"Your total bill per person is ${Slip_bills}")
+print(f"Thanks for stopping by Mr, {Customer_name} Your total bill is ${Total_bill}")
