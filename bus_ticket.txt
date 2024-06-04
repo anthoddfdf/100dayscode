@@ -1,0 +1,26 @@
+[200~#This code is for a bus company, I will be using multiple if statement in the argument 
+Num_of_passengers = int(input("How many passengers are in the bus? "))
+if Num_of_passengers <= 20:
+    print("Get more pasengers")
+    age = int(input("How old are you? "))
+    if age <= 4:
+        print("You are too young to get on the bus, where is youe family? ")
+    if age >= 5 and age <= 17:
+        print("You can get on the bus for free")  
+    elif age >=18:
+        print("Adult ticket $15")
+        num_of_ticket = int(input("How many tickets do you want? "))
+        total_price = num_of_ticket * 15
+        if num_of_ticket == 1:
+            print("Your total is $15")
+        else:
+            print(f"Your total is ${total_price}")
+            photo = input("Do you want a photo? Y or N. ")
+            if photo == "Y":
+                print(f"Your total is ${total_price + 9}")
+            else:
+                print(f"Your total is ${total_price}")
+                
+        print(f"You will pay ${total_price}")   
+else:
+    print("You have enough passengers")

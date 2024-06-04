@@ -1,0 +1,41 @@
+name = input("What is your name? ")
+print("Hey", name, "Welcome to Python Pizza Delivery")
+
+question = input("Do you want pizza? Y or N: ")
+if question == "Y":
+    print("I will be helping you with your order, please don't forget to rate us after your order.")
+
+    size = input("What size pizza do you want? S, M, or L: ")
+    bill = 0  # Initialize bill variable
+
+    if size == "S":
+        print("Small pizza is $15")
+        bill = 15
+    elif size == "M":
+        print("Medium pizza is $20")
+        bill = 20
+    elif size == "L":
+        print("Large pizza is $25")
+        bill = 25
+    else:
+        print("Invalid size selected.")
+        bill = 0  # Reset bill if invalid size
+
+    if size in ["S", "M", "L"]:  # Only proceed if a valid size was selected
+        pre = input("Do you want pepperoni? Y or N: ")
+        if pre == "Y":
+            if size == "S":
+                print("Pepperoni for small pizza is +$2")
+                bill += 2
+            else:
+                print("Pepperoni for medium or large pizza is +$3")
+                bill += 3
+
+        che = input("Do you want extra cheese? Y or N: ")
+        if che == "Y":
+            print("Extra cheese for any size pizza is +$1")
+            bill += 1
+
+        print(f"Thank you for choosing Python Pizza Deliveries! Your final bill is: ${bill}")
+else:
+    print("Thank you for choosing Python Pizza Deliveries!")

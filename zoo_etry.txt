@@ -1,0 +1,14 @@
+#This is a code to tell if a user can get into a zoo of not
+age_zoo = int(input("How old are you? "))
+if age_zoo >=18:
+  print("You can enter the zoo")
+  gate_fee = int(input("Gate fee price? "))
+  if gate_fee >=6:
+    print("You can enter the zoo by paying $8")
+  elif gate_fee >18:
+    print("You can enter the zoo by paying $18")
+  else:
+    print("Please go home")
+
+else:
+  print("You can't enter the zoo")
